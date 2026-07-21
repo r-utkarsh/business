@@ -50,8 +50,8 @@ const brandData = [
   {name:"Gillette",logo:"logos/gillette.png"},
   {name:"Glenmark Pharmaceuticals",logo:"logos/glenmark-pharmaceuticals.png"},
   {name:"Glow & Lovely",logo:"logos/glow-lovely.png"},
-  {name:"Godrej Consumer Products",logo:"logos/godrej-consumer-products.png"},
-  {name:"Godrej No. 1",logo:"logos/godrej-no-1.png"},
+  {name:"Godrej Products",logo:"logos/godrej-consumer-products.png"},
+  // {name:"Godrej No. 1",logo:"logos/godrej-no-1.png"},
   {name:"HIT",logo:"logos/hit.png"},
   {name:"Hamdard Dawakhana",logo:"logos/hamdard-dawakhana.png"},
   {name:"Head & Shoulders",logo:"logos/head-shoulders.png"},
@@ -106,13 +106,14 @@ const brandData = [
   {name:"Plethico Pharmaceuticals",logo:"logos/plethico-pharmaceuticals.png"},
   {name:"Pond's",logo:"logos/pond-s.png"},
   {name:"Procter & Gamble",logo:"logos/procter-gamble.png"},
+  {name:"Reckitt",logo:"logos/reckitt.webp"},
   {name:"RPG Life Sciences",logo:"logos/rpg-life-sciences.jpg"},
   {name:"Sandoz India",logo:"logos/sandoz-india.png"},
   {name:"Sanofi India",logo:"logos/sanofi-india.png"},
   {name:"Sensodyne",logo:"logos/sensodyne.png"},
   {name:"Set Wet",logo:"logos/set-wet.png"},
   {name:"Streax",logo:"logos/streax.png"},
-  {name:"Sun Pharmaceutical Industries",logo:"logos/sun-pharmaceutical-industries.png"},
+  {name:"Sun Pharmaceutical",logo:"logos/sun-pharmaceutical-industries.png"},
   {name:"Sunsilk",logo:"logos/sunsilk.png"},
   {name:"Systopic Laboratories",logo:"logos/systopic-laboratories.png"},
   {name:"TTK Healthcare",logo:"logos/ttk-healthcare.png"},
@@ -150,7 +151,7 @@ function brandCard(name) {
   const logo = brandLogoMap[name];
   const initials = name.replace(/[^A-Za-z]/g,'').slice(0,2).toUpperCase();
   const logoHtml = logo
-    ? `<img src="${logo}" alt="${name}" style="max-width:43px;max-height:43px;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">`
+    ? `<img src="${logo}" alt="${name}" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">`
     : '';
   const fallbackStyle = logo ? 'display:none' : 'display:grid';
   return `<article class="brand-card">${logoHtml}<span class="brand-mark" style="${fallbackStyle}">${initials}</span><strong>${name}</strong></article>`;
@@ -189,6 +190,7 @@ $('alphabet').addEventListener('click',e=>{ if(e.target.tagName !== 'BUTTON') re
 
 $('brandSearch').addEventListener('input',()=>{ activeLetter=''; brandLimit=18; renderBrands(); });
 $('loadMore').addEventListener('click',()=>{brandLimit+=20;renderBrands();});
+$('seeAll').addEventListener('click',()=>{brandLimit=brands.length;renderBrands();$('seeAll').hidden=true;});
 $('productSearch').addEventListener('input',renderProducts);
 
 $('productForm').addEventListener('submit',e=>{ e.preventDefault(); const data = new FormData(e.currentTarget); const file=data.get('image'); const add = image => { products.unshift({name:data.get('name'),brand:data.get('brand'),category:data.get('category'),icon:'📦',image}); if(!brands.includes(data.get('brand'))) brands.push(data.get('brand')); renderProducts(); e.currentTarget.reset(); showPage('products'); }; if(file && file.size) { const reader=new FileReader(); reader.onload=()=>add(reader.result); reader.readAsDataURL(file); } else add(''); });
