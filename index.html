@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="New Alok Medicose product catalogue. Call to confirm availability." />
+    <title>New Alok Medicose | Product catalogue</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="wordmark" href="#home" aria-label="New Alok Medicose home"><span>+</span> New Alok<br />Medicose</a>
+      <nav aria-label="Main navigation">
+        <button class="nav-link active" data-page="home">Home</button>
+        <button class="nav-link" data-page="brands">Brands</button>
+        <button class="nav-link" data-page="products">Search products</button>
+        <button class="nav-link" data-page="contact">Contact</button>
+      </nav>
+      <a class="side-call" href="tel:9837422545">Call us<br /><strong>98374 22545</strong></a>
+    </aside>
+
+    <main>
+      <div class="availability-note">Availability changes daily. Please call <a href="tel:9837422545">98374 22545</a> to confirm before visiting.</div>
+
+      <section class="page active" id="home">
+        <p class="eyebrow">YOUR NEIGHBOURHOOD MEDICAL STORE</p>
+        <h1>Care you can<br />count on.</h1>
+        <p class="intro">Genuine health and wellness products, sourced only from authorized dealers.</p>
+        <div class="tags" aria-label="Popular categories">
+          <span>Baby care</span><span>Personal care</span><span>Wellness</span><span>First aid</span><span>Nutrition</span>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">FEATURED BRANDS</p><h2>Trusted names, all in one place.</h2></div><button class="text-button" data-go="brands">View all brands →</button></div>
+        <div class="brand-grid featured-brands" id="featuredBrands"></div>
+        <div class="callout"><div><p class="eyebrow">NEED HELP FINDING SOMETHING?</p><h2>We are just a call away.</h2><p>Call us to ask about a product or confirm availability.</p></div><a class="primary-button" href="tel:9837422545">Call 98374 22545</a></div>
+      </section>
+
+      <section class="page" id="brands">
+        <p class="eyebrow">BRAND DIRECTORY</p><h1>Browse brands.</h1>
+        <p class="intro compact">Find the health, personal care and wellness brands you know and trust.</p>
+        <label class="search-field"><span>⌕</span><input id="brandSearch" type="search" placeholder="Search a brand" autocomplete="off" /></label>
+        <div class="brand-browser"><div class="alphabet" id="alphabet" aria-label="Jump to letter"></div><div><p class="result-count" id="brandCount"></p><div class="brand-grid" id="brandGrid"></div><button class="secondary-button" id="loadMore">Load more brands</button></div></div>
+      </section>
+
+      <section class="page" id="products">
+        <p class="eyebrow">PRODUCT CATALOGUE</p><h1>Find what you need.</h1>
+        <p class="intro compact">Search by full product name, brand, or a category such as “diaper”.</p>
+        <label class="search-field product-search"><span>⌕</span><input id="productSearch" type="search" placeholder="Search products or categories" autocomplete="off" /></label>
+        <p class="future-note">Salt / compound search is planned for a future update.</p>
+        <p class="result-count" id="productCount"></p><div class="product-grid" id="productGrid"></div>
+        <div class="empty-state hidden" id="noProducts"><h2>Nothing matched that search.</h2><p>Please call us—we may still be able to help.</p><a class="primary-button" href="tel:9837422545">Call us</a></div>
+      </section>
+
+      <section class="page" id="contact">
+        <p class="eyebrow">CONTACT</p><h1>Let’s talk.</h1><p class="intro">For product questions and availability, please call the store directly.</p>
+        <div class="contact-card"><span class="contact-icon">☎</span><div><p class="eyebrow">NEW ALOK MEDICOSE</p><h2>98374 22545</h2><p>Call during store hours to confirm availability.</p></div><a class="primary-button" href="tel:9837422545">Call now</a></div>
+      </section>
+
+      <section class="admin-panel" aria-label="Demo catalogue admin">
+        <div><p class="eyebrow">DEMO ADMIN</p><h2>Add a product</h2><p>This demo saves additions only until the page is refreshed.</p></div>
+        <form id="productForm"><label>Product name<input name="name" required placeholder="e.g. Baby lotion" /></label><label>Brand<input name="brand" required placeholder="e.g. Himalaya" /></label><label>Category<input name="category" required placeholder="e.g. Baby care" /></label><label>Product image<input name="image" type="file" accept="image/*" /></label><button class="primary-button" type="submit">Add product</button></form>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

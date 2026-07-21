@@ -1,0 +1,37 @@
+current_name,recommended_display_name,review_action,reason
+Dabur,Dabur India,exclude,"Store chose Dabur India as the website label."
+Dabur India,Dabur India,keep,"Store-approved website label."
+Galderma,Galderma India,exclude,"Store chose Galderma India as the website label."
+Galderma India,Galderma India,keep,"Store-approved website label."
+Glenmark,Glenmark Pharmaceuticals,exclude,"Store chose Glenmark Pharmaceuticals as the website label."
+Glenmark Pharmaceuticals,Glenmark Pharmaceuticals,keep,"Store-approved website label."
+Himalaya,Himalaya Wellness,prefer Himalaya Wellness,"Himalaya Wellness is the fuller public-facing brand name."
+Himalaya Wellness,Himalaya Wellness,keep,"Use this as the main public-facing card name."
+J.B. Chemicals & Pharmaceuticals,J.B. Chemicals & Pharmaceuticals,prefer this spelling,"More complete spelling of the same company listed as JB Chemicals & Pharmaceuticals."
+JB Chemicals & Pharmaceuticals,J.B. Chemicals & Pharmaceuticals,merge with J.B. Chemicals & Pharmaceuticals,"Same company; punctuation is the only difference."
+Hamdard,Hamdard Dawakhana,exclude,"Store chose Hamdard Dawakhana as the website label."
+Hamdard Dawakhana,Hamdard Dawakhana,keep,"Store-approved website label."
+Hamdard Laboratories India,Hamdard Dawakhana,exclude,"Store chose Hamdard Dawakhana as the website label."
+Zandu,Zandu,keep,"Store-approved website label."
+Zandu Pharmaceutical Works,Zandu,exclude,"Store chose Zandu as the website label."
+Colgate,Colgate,keep,"Consumer-facing brand."
+Colgate-Palmolive,Colgate-Palmolive,keep,"Manufacturer/company; distinct from the Colgate consumer brand."
+Cipla,Cipla,keep,"Manufacturer/consumer-facing brand."
+Cipla Health,Cipla Health,keep,"Separate consumer-health business label; retain both."
+Patanjali Ayurved,Patanjali Ayurved,keep,"Main Ayurveda/manufacturer label."
+Patanjali Wellness,Patanjali Wellness,keep,"Separate wellness label; retain both."
+*** Add File: C:\Users\utkar\Desktop\Shop\brand_cleanup_notes.md
+# Brand-list cleanup
+
+The checked list contains 139 entries. Most can be used as written.
+
+`brand_review.csv` flags only names that look like the same organisation under two spellings or a short/full name. It deliberately keeps a consumer-facing brand and its manufacturer when they are genuinely different browsing labels—for example, Colgate and Colgate-Palmolive.
+
+Recommended immediate decisions:
+
+- Merge **JB Chemicals & Pharmaceuticals** into **J.B. Chemicals & Pharmaceuticals**.
+- Use **Himalaya Wellness** as the display name.
+- Choose a single card/logo for each of Dabur/Dabur India, Galderma/Galderma India, and Glenmark/Glenmark Pharmaceuticals.
+- Ask the store to confirm whether Hamdard, Hamdard Dawakhana, Hamdard Laboratories India, Zandu, and Zandu Pharmaceutical Works should have separate cards.
+
+No source data has been deleted; `selected_brands.csv` remains the complete original selection.
