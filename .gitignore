@@ -1,0 +1,8 @@
+.env
+.obsidian/
+logos/
+product_images/
+*.csv
+*.xlsx
+*.pyc
+__pycache__/
