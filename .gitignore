@@ -2,7 +2,11 @@
 .obsidian/
 logos/
 product_images/
+scripts/
+csv_files/
+excel_files/
 *.csv
 *.xlsx
 *.pyc
-__pycache__/
+*.py
+__pycache__/
