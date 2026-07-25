@@ -11,16 +11,17 @@
     <aside class="sidebar">
       <a class="wordmark" href="#home" aria-label="New Alok Medicose home"><span>+</span> New Alok<br />Medicose</a>
       <nav aria-label="Main navigation">
-        <button class="nav-link active" data-page="home">Home</button>
-        <button class="nav-link" data-page="brands">Brands</button>
-        <button class="nav-link" data-page="products">Search products</button>
-        <button class="nav-link" data-page="contact">Contact</button>
+        <button class="nav-link active" data-page="home"><span class="nav-icon">🏠</span><span class="nav-text">Home</span></button>
+        <button class="nav-link" data-page="brands"><span class="nav-icon">🏷️</span><span class="nav-text">Brands</span></button>
+        <button class="nav-link" data-page="products"><span class="nav-icon">🔍</span><span class="nav-text">Products</span></button>
+        <button class="nav-link" data-page="salts"><span class="nav-icon">🧪</span><span class="nav-text">Salt</span></button>
+        <button class="nav-link" data-page="contact"><span class="nav-icon">📞</span><span class="nav-text">Contact</span></button>
       </nav>
       <a class="side-call" href="tel:9837422545">Call us<br /><strong>98374 22545</strong></a>
     </aside>
 
     <main>
-      <div class="availability-note">Availability changes daily. Please call <a href="tel:9837422545">98374 22545</a> to confirm before visiting.</div>
+      <div class="availability-note">Store hours: <strong>9:00 AM – 9:30 PM (Daily)</strong>. Please call <a href="tel:9837422545">98374 22545</a> to confirm availability before visiting.</div>
 
       <section class="page active" id="home">
         <p class="eyebrow">YOUR NEIGHBOURHOOD MEDICAL STORE</p>
@@ -45,21 +46,26 @@
         <p class="eyebrow">PRODUCT CATALOGUE</p><h1>Find what you need.</h1>
         <p class="intro compact">Search by full product name, brand, or a category such as “diaper”.</p>
         <label class="search-field product-search"><span>⌕</span><input id="productSearch" type="search" placeholder="Search products or categories" autocomplete="off" /></label>
-        <p class="future-note">Salt / compound search is planned for a future update.</p>
-        <p class="result-count" id="productCount"></p><div class="product-grid" id="productGrid"></div>
+        <p class="result-count" id="productCount"></p><div class="product-grid" id="productGrid"></div><button class="secondary-button" id="loadMoreProducts" style="margin-top:26px">Load more products</button> <button class="secondary-button" id="seeAllProducts" style="margin-top:26px;margin-left:10px;border-color:#e74c3c;color:#e74c3c">⚙ See all (dev)</button>
         <div class="empty-state hidden" id="noProducts"><h2>Nothing matched that search.</h2><p>Please call us—we may still be able to help.</p><a class="primary-button" href="tel:9837422545">Call us</a></div>
       </section>
 
-      <section class="page" id="contact">
-        <p class="eyebrow">CONTACT</p><h1>Let’s talk.</h1><p class="intro">For product questions and availability, please call the store directly.</p>
-        <div class="contact-card"><span class="contact-icon">☎</span><div><p class="eyebrow">NEW ALOK MEDICOSE</p><h2>98374 22545</h2><p>Call during store hours to confirm availability.</p></div><a class="primary-button" href="tel:9837422545">Call now</a></div>
+      <section class="page" id="salts">
+        <p class="eyebrow">SEARCH BY SALT / COMPOSITION</p><h1>Find by active ingredient.</h1>
+        <p class="intro compact">Type a salt name like “Paracetamol”, “Dapagliflozin”, or “Pantoprazole” to find all matching products in store.</p>
+        <label class="search-field product-search"><span>🧪</span><input id="saltSearch" type="search" placeholder="Search by salt or composition" autocomplete="off" /></label>
+        <div class="tags salt-tags" id="saltTags" aria-label="Popular salts"></div>
+        <p class="result-count" id="saltCount"></p><div class="product-grid" id="saltGrid"></div><button class="secondary-button" id="loadMoreSalts" style="margin-top:26px">Load more</button>
+        <div class="empty-state hidden" id="noSalts"><h2>No products found for that salt.</h2><p>Please call us—we may still be able to help.</p><a class="primary-button" href="tel:9837422545">Call us</a></div>
       </section>
 
-      <section class="admin-panel" aria-label="Demo catalogue admin">
-        <div><p class="eyebrow">DEMO ADMIN</p><h2>Add a product</h2><p>This demo saves additions only until the page is refreshed.</p></div>
-        <form id="productForm"><label>Product name<input name="name" required placeholder="e.g. Baby lotion" /></label><label>Brand<input name="brand" required placeholder="e.g. Himalaya" /></label><label>Category<input name="category" required placeholder="e.g. Baby care" /></label><label>Product image<input name="image" type="file" accept="image/*" /></label><button class="primary-button" type="submit">Add product</button></form>
+      <section class="page" id="contact">
+        <p class="eyebrow">STORE DETAILS & CONTACT</p><h1>Let’s talk.</h1><p class="intro">For product questions and availability, please call the store directly or visit us in person.</p>
+        <div class="contact-card"><span class="contact-icon">☎</span><div><p class="eyebrow">PHONE</p><h2>98374 22545</h2><p>Store hours: <strong>9:00 AM – 9:30 PM</strong> (Open daily)</p></div><a class="primary-button" href="tel:9837422545">Call now</a></div>
+        <div class="contact-card" style="margin-top:20px"><span class="contact-icon">📍</span><div><p class="eyebrow">LOCATION</p><h2>New Alok Medicose</h2><p>Get directions to our shop on Google Maps.</p></div><a class="secondary-button" href="https://maps.app.goo.gl/hirS5NMZprJ2DpeD7" target="_blank" rel="noopener">Get directions →</a></div>
       </section>
     </main>
+    <script src="product_data.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

@@ -8,6 +8,8 @@ const brandData = [
   {name:"Alembic Pharmaceuticals",logo:"logos/alembic-pharmaceuticals.png"},
   {name:"Alkem Laboratories",logo:"logos/alkem-laboratories.png"},
   {name:"Ami Organics",logo:"logos/ami-organics.png"},
+  {name:"Amul",logo:"logos/amul.png"},
+  {name:"Apex Laboratories",logo:"logos/apex-laboratories.png"},
   {name:"Aristo Pharmaceuticals",logo:"logos/aristo-pharmaceuticals.png"},
   {name:"AstraZeneca India",logo:"logos/astrazeneca-india.png"},
   {name:"Baidyanath Jhansi",logo:"logos/baidyanath-jhansi.png"},
@@ -15,18 +17,16 @@ const brandData = [
   {name:"Bayer Pharmaceuticals",logo:"logos/bayer-pharmaceuticals.png"},
   {name:"Biological E",logo:"logos/biological-e.png"},
   {name:"Blue Cross Laboratories",logo:"logos/blue-cross-laboratories.png"},
-  // {name:"BoroPlus",logo:"logos/boroplus.png"},
+  {name:"Bournvita",logo:"logos/bournvita.png"},
   {name:"Cadila Pharmaceuticals",logo:"logos/cadila-pharmaceuticals.png"},
   {name:"Centaur Pharmaceuticals",logo:"logos/centaur-pharmaceuticals.png"},
   {name:"Cetaphil",logo:"logos/cetaphil.png"},
   {name:"Charak Pharma",logo:"logos/charak-pharma.png"},
-  // {name:"Cinthol",logo:"logos/cinthol.png"},
   {name:"Cipla",logo:"logos/cipla.png"},
   {name:"Cipla Health",logo:"logos/cipla-health.png"},
-  // {name:"Clinic Plus",logo:"logos/clinic-plus.png"},
   {name:"Closeup",logo:"logos/closeup.png"},
   {name:"Colgate",logo:"logos/colgate-palmolive.png"},
-  // {name:"Colgate-Palmolive",logo:"logos/colgate-palmolive.png"},
+  {name:"Complan",logo:"logos/complan.png"},
   {name:"Corona Remedies",logo:"logos/corona-remedies.png"},
   {name:"Dabur India",logo:"logos/dabur-india.png"},
   {name:"Dawakhana Tibbiya College",logo:"logos/dawakhana-tibbiya-college.png"},
@@ -39,11 +39,9 @@ const brandData = [
   {name:"Emami",logo:"logos/emami.png"},
   {name:"Emcure Pharmaceuticals",logo:"logos/emcure-pharmaceuticals.png"},
   {name:"Eris Lifesciences",logo:"logos/eris-lifesciences.png"},
-  {name:"FDC",logo:"logos/fdc.png"},
-  {name:"Fair & Lovely",logo:"logos/glow-lovely.png"},
   {name:"Fair and Handsome",logo:"logos/fair-and-handsome.png"},
+  {name:"FDC",logo:"logos/fdc.png"},
   {name:"Franco-Indian Pharmaceuticals",logo:"logos/franco-indian-pharmaceuticals.png"},
-  // {name:"Fulford India",logo:""},
   {name:"GSK India",logo:"logos/gsk-india.png"},
   {name:"Galderma India",logo:"logos/galderma-india.png"},
   {name:"Garnier",logo:"logos/garnier.png"},
@@ -51,9 +49,9 @@ const brandData = [
   {name:"Glenmark Pharmaceuticals",logo:"logos/glenmark-pharmaceuticals.png"},
   {name:"Glow & Lovely",logo:"logos/glow-lovely.png"},
   {name:"Godrej Products",logo:"logos/godrej-consumer-products.png"},
-  // {name:"Godrej No. 1",logo:"logos/godrej-no-1.png"},
   {name:"HIT",logo:"logos/hit.png"},
   {name:"Hamdard Dawakhana",logo:"logos/hamdard-dawakhana.png"},
+  {name:"Hansaplast",logo:"logos/hansaplast.png"},
   {name:"Head & Shoulders",logo:"logos/head-shoulders.png"},
   {name:"Himalaya",logo:"logos/himalaya.png"},
   {name:"Himalaya Wellness",logo:"logos/himalaya-wellness.png"},
@@ -65,7 +63,6 @@ const brandData = [
   {name:"Intas Pharmaceuticals",logo:"logos/intas-pharmaceuticals.png"},
   {name:"Ipca Laboratories",logo:"logos/ipca-laboratories.png"},
   {name:"JB. Chemicals & Pharmaceuticals",logo:"logos/j-b-chemicals-pharmaceuticals.png"},
-  // {name:"JB Chemicals & Pharmaceuticals",logo:"logos/jb-chemicals-pharmaceuticals.png"},
   {name:"Jagsonpal Pharmaceuticals",logo:"logos/jagsonpal-pharmaceuticals.png"},
   {name:"Johnson & Johnson",logo:"logos/johnson-johnson.png"},
   {name:"Jubilant Generics",logo:"logos/jubilant-generics.png"},
@@ -75,11 +72,11 @@ const brandData = [
   {name:"Lakmé",logo:"logos/lakm.png"},
   {name:"Leeford",logo:"logos/leeford.png"},
   {name:"Lifebuoy",logo:"logos/lifebuoy.png"},
-  // {name:"Livon",logo:"logos/livon.png"},
   {name:"Lotus Herbals",logo:"logos/lotus-herbals.png"},
   {name:"Lupin",logo:"logos/lupin.png"},
   {name:"Macleods Pharmaceuticals",logo:"logos/macleods-pharmaceuticals.png"},
   {name:"Mamaearth",logo:"logos/mamaearth.png"},
+  {name:"MamyPoko",logo:"logos/mamypoko.png"},
   {name:"Mankind Pharma",logo:"logos/mankind-pharma.png"},
   {name:"Marico",logo:"logos/marico.png"},
   {name:"Merck India",logo:"logos/merck-india.png"},
@@ -87,8 +84,7 @@ const brandData = [
   {name:"Meyer Organics",logo:"logos/meyer-organics.png"},
   {name:"Micro Labs",logo:"logos/micro-labs.png"},
   {name:"Navratna",logo:"logos/navratna.png"},
-  {name:"Nestlé Health Science India",logo:"logos/nestl-health-science-india.png"},
-  // {name:"Nihar Naturals",logo:"logos/nihar-naturals.png"},
+  {name:"Nestle India Ltd",logo:"logos/nestl-health-science-india.png"},
   {name:"Nivea",logo:"logos/nivea.png"},
   {name:"Novartis India",logo:"logos/novartis-india.png"},
   {name:"Old Spice",logo:"logos/old-spice.png"},
@@ -100,6 +96,7 @@ const brandData = [
   {name:"Parachute",logo:"logos/parachute.png"},
   {name:"Patanjali Ayurved",logo:"logos/patanjali-ayurved.png"},
   {name:"Patanjali Wellness",logo:"logos/patanjali-wellness.png"},
+  {name:"Pears",logo:"logos/pears.png"},
   {name:"Pepsodent",logo:"logos/pepsodent.png"},
   {name:"Pfizer India",logo:"logos/pfizer-india.png"},
   {name:"Piramal Pharma",logo:"logos/piramal-pharma.png"},
@@ -110,8 +107,10 @@ const brandData = [
   {name:"RPG Life Sciences",logo:"logos/rpg-life-sciences.jpg"},
   {name:"Sandoz India",logo:"logos/sandoz-india.png"},
   {name:"Sanofi India",logo:"logos/sanofi-india.png"},
+  {name:"Savlon",logo:"logos/savlon.png"},
   {name:"Sensodyne",logo:"logos/sensodyne.png"},
   {name:"Set Wet",logo:"logos/set-wet.png"},
+  {name:"Sofy",logo:"logos/sofy.png"},
   {name:"Streax",logo:"logos/streax.png"},
   {name:"Sun Pharmaceutical",logo:"logos/sun-pharmaceutical-industries.png"},
   {name:"Sunsilk",logo:"logos/sunsilk.png"},
@@ -135,16 +134,40 @@ const brandData = [
   {name:"Zydus Lifesciences",logo:"logos/zydus-lifesciences.png"},
   {name:"Zydus Wellness",logo:"logos/zydus-wellness.png"}
 ];
+
+brandData.sort((a, b) => a.name.localeCompare(b.name));
 const brands = brandData.map(b => b.name);
 const brandLogoMap = {};
 brandData.forEach(b => { brandLogoMap[b.name] = b.logo; });
 
-let products = [
-  ['Pampers Active Baby Diapers','Pampers','Baby care','👶'],['Himalaya Baby Lotion','Himalaya','Baby care','🧴'],['Cetaphil Gentle Skin Cleanser','Cetaphil','Personal care','🫧'],['Dettol Antiseptic Liquid','Dettol','First aid','🩹'],['Dabur Chyawanprash','Dabur','Wellness','🍯'],['Ensure Nutrition Powder','Abbott','Nutrition','🥛'],['Colgate Strong Teeth Toothpaste','Colgate','Personal care','🪥'],['Accu-Chek Active Test Strips','Accu-Chek','Devices','🩸'],['Vicks Vaporub','Vicks','Wellness','🌿'],['Johnson\'s Baby Shampoo','Johnson\'s','Baby care','🛁'],['Dr. Morepen Blood Pressure Monitor','Dr. Morepen','Devices','🩺'],['Savlon Hand Sanitizer','Savlon','Personal care','🧼']
-].map(([name,brand,category,icon])=>({name,brand,category,icon}));
+function getBrandLogo(brandName) {
+  if (!brandName) return '';
+  if (brandLogoMap[brandName]) return brandLogoMap[brandName];
+  const norm = brandName.toLowerCase().replace(/[^a-z0-9]/g, '');
+  for (const b in brandLogoMap) {
+    const bNorm = b.toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (bNorm && (norm.includes(bNorm) || bNorm.includes(norm))) {
+      return brandLogoMap[b];
+    }
+  }
+  return '';
+}
+
+let products = (typeof shopProductsData !== 'undefined' && shopProductsData.length > 0)
+  ? shopProductsData.map(p => ({
+      name: p.name,
+      brand: p.brand,
+      trade: p.trade,
+      salt: p.salt || '',
+      category: p.trade || p.brand,
+      icon: '💊',
+      image: p.image
+    }))
+  : [];
 
 const $ = id => document.getElementById(id);
 let brandLimit = 18;
+let productLimit = 24;
 let activeLetter = '';
 
 function brandCard(name) {
@@ -166,12 +189,32 @@ function renderBrands() {
   $('loadMore').hidden = shown.length >= filtered.length;
 }
 
+function productCard(p) {
+  const logo = getBrandLogo(p.brand);
+  let imgHtml = '';
+  if (p.image) {
+    imgHtml = `<img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />`;
+  }
+  const logoFallback = logo
+    ? `<img src="${logo}" alt="${p.brand}" style="max-width:80px;max-height:80px;object-fit:contain;" />`
+    : `<span style="font-size:32px">${p.icon}</span>`;
+  const fallbackStyle = p.image ? 'display:none' : 'display:grid';
+  return `<article class="product-card"><div class="product-image">${imgHtml}<div style="${fallbackStyle};place-items:center;width:100%;height:100%">${logoFallback}</div></div><p class="brand-label">${p.brand}</p><strong>${p.name}</strong></article>`;
+}
+
 function renderProducts() {
   const term = $('productSearch').value.toLowerCase().trim();
-  const shown = products.filter(p => !term || `${p.name} ${p.brand} ${p.category}`.toLowerCase().includes(term));
-  $('productGrid').innerHTML = shown.map(p => `<article class="product-card"><div class="product-image">${p.image ? `<img src="${p.image}" alt="" />` : p.icon}</div><p class="brand-label">${p.brand}</p><strong>${p.name}</strong></article>`).join('');
-  $('productCount').textContent = `${shown.length} product${shown.length === 1 ? '' : 's'} shown`;
-  $('noProducts').classList.toggle('hidden', shown.length !== 0);
+  const filtered = products.filter(p => !term || `${p.name} ${p.brand} ${p.category} ${p.trade || ''}`.toLowerCase().includes(term));
+  const shown = filtered.slice(0, productLimit);
+  $('productGrid').innerHTML = shown.map(productCard).join('');
+  $('productCount').textContent = `${filtered.length} product${filtered.length === 1 ? '' : 's'} available in store`;
+  $('noProducts').classList.toggle('hidden', filtered.length !== 0);
+  if ($('loadMoreProducts')) {
+    $('loadMoreProducts').hidden = shown.length >= filtered.length;
+  }
+  if ($('seeAllProducts')) {
+    $('seeAllProducts').hidden = shown.length >= filtered.length;
+  }
 }
 
 function showPage(page) {
@@ -183,7 +226,7 @@ function showPage(page) {
 document.querySelectorAll('.nav-link').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.go)));
 
-$('featuredBrands').innerHTML = brands.slice(0,6).map(brandCard).join('');
+$('featuredBrands').innerHTML = ['Dabur India', 'Himalaya', 'Abbott India', 'Cipla', 'Mankind Pharma', 'Sun Pharmaceutical'].filter(b=>brands.includes(b)).map(brandCard).join('');
 $('alphabet').innerHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter=>`<button aria-label="Brands starting with ${letter}">${letter}</button>`).join('');
 
 $('alphabet').addEventListener('click',e=>{ if(e.target.tagName !== 'BUTTON') return; activeLetter = activeLetter === e.target.textContent ? '' : e.target.textContent; document.querySelectorAll('.alphabet button').forEach(b=>b.classList.toggle('active',b.textContent===activeLetter)); brandLimit=18; renderBrands(); });
@@ -191,9 +234,55 @@ $('alphabet').addEventListener('click',e=>{ if(e.target.tagName !== 'BUTTON') re
 $('brandSearch').addEventListener('input',()=>{ activeLetter=''; brandLimit=18; renderBrands(); });
 $('loadMore').addEventListener('click',()=>{brandLimit+=20;renderBrands();});
 $('seeAll').addEventListener('click',()=>{brandLimit=brands.length;renderBrands();$('seeAll').hidden=true;});
-$('productSearch').addEventListener('input',renderProducts);
+$('productSearch').addEventListener('input',()=>{ productLimit=24; renderProducts(); });
+if ($('loadMoreProducts')) $('loadMoreProducts').addEventListener('click',()=>{ productLimit+=24; renderProducts(); });
+if ($('seeAllProducts')) $('seeAllProducts').addEventListener('click',()=>{ productLimit=products.length; renderProducts(); });
 
-$('productForm').addEventListener('submit',e=>{ e.preventDefault(); const data = new FormData(e.currentTarget); const file=data.get('image'); const add = image => { products.unshift({name:data.get('name'),brand:data.get('brand'),category:data.get('category'),icon:'📦',image}); if(!brands.includes(data.get('brand'))) brands.push(data.get('brand')); renderProducts(); e.currentTarget.reset(); showPage('products'); }; if(file && file.size) { const reader=new FileReader(); reader.onload=()=>add(reader.result); reader.readAsDataURL(file); } else add(''); });
+// --- Salt / Composition Search ---
+let saltLimit = 24;
+const popularSalts = [
+  'Paracetamol','Pantoprazole','Cetirizine','Azithromycin','Amoxicillin',
+  'Metformin','Dapagliflozin','Telmisartan','Amlodipine','Levothyroxine Sodium',
+  'Atorvastatin','Diclofenac','Omeprazole','Montelukast','Calcium + Vitamin D3',
+  'Vitamin B1 + B6 + B12','Povidone-Iodine','Clopidogrel','Aspirin','Budesonide'
+];
+
+function renderSaltTags() {
+  if (!$('saltTags')) return;
+  $('saltTags').innerHTML = popularSalts.map(s => `<span class="salt-tag" role="button" tabindex="0">${s}</span>`).join('');
+}
+
+function renderSalts() {
+  if (!$('saltSearch')) return;
+  const term = $('saltSearch').value.toLowerCase().trim();
+  const filtered = products.filter(p => {
+    const salt = (p.salt || '').toLowerCase();
+    return salt && (!term || salt.includes(term));
+  });
+  const shown = filtered.slice(0, saltLimit);
+  $('saltGrid').innerHTML = shown.map(p => {
+    const card = productCard(p);
+    return card.replace('</article>', `<p class="salt-label">${p.salt}</p></article>`);
+  }).join('');
+  $('saltCount').textContent = term
+    ? `${filtered.length} product${filtered.length === 1 ? '' : 's'} matching "${$('saltSearch').value.trim()}"`
+    : `Type a salt name above or tap a popular salt badge`;
+  $('noSalts').classList.toggle('hidden', filtered.length !== 0 || !term);
+  if ($('loadMoreSalts')) $('loadMoreSalts').hidden = shown.length >= filtered.length;
+}
+
+renderSaltTags();
+
+if ($('saltTags')) $('saltTags').addEventListener('click', e => {
+  if (!e.target.classList.contains('salt-tag')) return;
+  $('saltSearch').value = e.target.textContent;
+  saltLimit = 24;
+  renderSalts();
+});
+
+$('saltSearch').addEventListener('input', () => { saltLimit = 24; renderSalts(); });
+if ($('loadMoreSalts')) $('loadMoreSalts').addEventListener('click', () => { saltLimit += 24; renderSalts(); });
 
 renderBrands();
 renderProducts();
+renderSalts();
