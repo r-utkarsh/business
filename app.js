@@ -192,6 +192,8 @@ function renderBrands() {
   $('loadMore').style.display = shown.length >= filtered.length ? 'none' : '';
 }
 
+
+
 function productCard(p) {
   const logo = getBrandLogo(p.brand);
   const image = safeImagePath(p.image);
@@ -221,7 +223,17 @@ function renderProducts() {
 function showPage(page) {
   document.querySelectorAll('.page').forEach(s=>s.classList.toggle('active',s.id===page));
   document.querySelectorAll('.nav-link').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
-  window.scrollTo(0,0);
+  const active = $(page);
+  const searchField = active && active.querySelector('.search-field');
+  const searchInput = active && active.querySelector('.search-field input');
+  if (searchField && searchInput) {
+    setTimeout(()=>{
+      searchField.scrollIntoView({behavior:'smooth',block:'start'});
+      searchInput.focus({preventScroll:true});
+    }, 50);
+  } else {
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
 }
 
 document.querySelectorAll('.nav-link').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));

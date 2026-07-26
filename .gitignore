@@ -8,3 +8,4 @@ excel_files/
 *.xlsx
 *.pyc
 __pycache__/
+DESIGN.md
