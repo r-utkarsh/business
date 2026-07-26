@@ -1,7 +1,5 @@
 .env
 .obsidian/
-logos/
-product_images/
 csv_files/
 excel_files/
 *.csv
