@@ -166,6 +166,8 @@ let products = (typeof shopProductsData !== 'undefined' && shopProductsData.leng
   : [];
 
 const $ = id => document.getElementById(id);
+const esc = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+document.addEventListener('error', e => { if (e.target.tagName === 'IMG') { e.target.style.display = 'none'; const sib = e.target.nextElementSibling; if (sib) sib.style.display = 'grid'; } }, true);
 let brandLimit = 18;
 let productLimit = 24;
 let activeLetter = '';
@@ -174,10 +176,10 @@ function brandCard(name) {
   const logo = brandLogoMap[name];
   const initials = name.replace(/[^A-Za-z]/g,'').slice(0,2).toUpperCase();
   const logoHtml = logo
-    ? `<img src="${logo}" alt="${name}" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">`
+    ? `<img src="${logo}" alt="${esc(name)}">`
     : '';
   const fallbackStyle = logo ? 'display:none' : 'display:grid';
-  return `<article class="brand-card">${logoHtml}<span class="brand-mark" style="${fallbackStyle}">${initials}</span><strong>${name}</strong></article>`;
+  return `<article class="brand-card">${logoHtml}<span class="brand-mark" style="${fallbackStyle}">${esc(initials)}</span><strong>${esc(name)}</strong></article>`;
 }
 
 function renderBrands() {
@@ -186,20 +188,20 @@ function renderBrands() {
   const shown = filtered.slice(0, brandLimit);
   $('brandGrid').innerHTML = shown.map(brandCard).join('');
   $('brandCount').textContent = `${filtered.length} brand${filtered.length === 1 ? '' : 's'} found`;
-  $('loadMore').hidden = shown.length >= filtered.length;
+  $('loadMore').style.display = shown.length >= filtered.length ? 'none' : '';
 }
 
 function productCard(p) {
   const logo = getBrandLogo(p.brand);
   let imgHtml = '';
   if (p.image) {
-    imgHtml = `<img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />`;
+    imgHtml = `<img src="${p.image}" alt="${esc(p.name)}" loading="lazy" />`;
   }
   const logoFallback = logo
-    ? `<img src="${logo}" alt="${p.brand}" style="max-width:80px;max-height:80px;object-fit:contain;" />`
+    ? `<img src="${logo}" alt="${esc(p.brand)}" style="max-width:80px;max-height:80px;object-fit:contain;" />`
     : `<span style="font-size:32px">${p.icon}</span>`;
   const fallbackStyle = p.image ? 'display:none' : 'display:grid';
-  return `<article class="product-card"><div class="product-image">${imgHtml}<div style="${fallbackStyle};place-items:center;width:100%;height:100%">${logoFallback}</div></div><p class="brand-label">${p.brand}</p><strong>${p.name}</strong></article>`;
+  return `<article class="product-card"><div class="product-image">${imgHtml}<div style="${fallbackStyle};place-items:center;width:100%;height:100%">${logoFallback}</div></div><p class="brand-label">${esc(p.brand)}</p><strong>${esc(p.name)}</strong></article>`;
 }
 
 function renderProducts() {
@@ -210,10 +212,7 @@ function renderProducts() {
   $('productCount').textContent = `${filtered.length} product${filtered.length === 1 ? '' : 's'} available in store`;
   $('noProducts').classList.toggle('hidden', filtered.length !== 0);
   if ($('loadMoreProducts')) {
-    $('loadMoreProducts').hidden = shown.length >= filtered.length;
-  }
-  if ($('seeAllProducts')) {
-    $('seeAllProducts').hidden = shown.length >= filtered.length;
+    $('loadMoreProducts').style.display = shown.length >= filtered.length ? 'none' : '';
   }
 }
 
@@ -233,10 +232,8 @@ $('alphabet').addEventListener('click',e=>{ if(e.target.tagName !== 'BUTTON') re
 
 $('brandSearch').addEventListener('input',()=>{ activeLetter=''; brandLimit=18; renderBrands(); });
 $('loadMore').addEventListener('click',()=>{brandLimit+=20;renderBrands();});
-$('seeAll').addEventListener('click',()=>{brandLimit=brands.length;renderBrands();$('seeAll').hidden=true;});
 $('productSearch').addEventListener('input',()=>{ productLimit=24; renderProducts(); });
 if ($('loadMoreProducts')) $('loadMoreProducts').addEventListener('click',()=>{ productLimit+=24; renderProducts(); });
-if ($('seeAllProducts')) $('seeAllProducts').addEventListener('click',()=>{ productLimit=products.length; renderProducts(); });
 
 // --- Salt / Composition Search ---
 let saltLimit = 24;
@@ -262,13 +259,13 @@ function renderSalts() {
   const shown = filtered.slice(0, saltLimit);
   $('saltGrid').innerHTML = shown.map(p => {
     const card = productCard(p);
-    return card.replace('</article>', `<p class="salt-label">${p.salt}</p></article>`);
+    return card.replace('</article>', `<p class="salt-label">${esc(p.salt)}</p></article>`);
   }).join('');
   $('saltCount').textContent = term
     ? `${filtered.length} product${filtered.length === 1 ? '' : 's'} matching "${$('saltSearch').value.trim()}"`
     : `Type a salt name above or tap a popular salt badge`;
   $('noSalts').classList.toggle('hidden', filtered.length !== 0 || !term);
-  if ($('loadMoreSalts')) $('loadMoreSalts').hidden = shown.length >= filtered.length;
+  if ($('loadMoreSalts')) $('loadMoreSalts').style.display = shown.length >= filtered.length ? 'none' : '';
 }
 
 renderSaltTags();
