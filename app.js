@@ -167,6 +167,7 @@ let products = (typeof shopProductsData !== 'undefined' && shopProductsData.leng
 
 const $ = id => document.getElementById(id);
 const esc = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+const safeImagePath = path => /^product_images\/[a-z0-9][a-z0-9-]*\.(?:jpe?g|png|webp)$/i.test(path || '') ? path : '';
 document.addEventListener('error', e => { if (e.target.tagName === 'IMG') { e.target.style.display = 'none'; const sib = e.target.nextElementSibling; if (sib) sib.style.display = 'grid'; } }, true);
 let brandLimit = 18;
 let productLimit = 24;
@@ -193,14 +194,15 @@ function renderBrands() {
 
 function productCard(p) {
   const logo = getBrandLogo(p.brand);
+  const image = safeImagePath(p.image);
   let imgHtml = '';
-  if (p.image) {
-    imgHtml = `<img src="${p.image}" alt="${esc(p.name)}" loading="lazy" />`;
+  if (image) {
+    imgHtml = `<img src="${image}" alt="${esc(p.name)}" loading="lazy" />`;
   }
   const logoFallback = logo
     ? `<img src="${logo}" alt="${esc(p.brand)}" style="max-width:80px;max-height:80px;object-fit:contain;" />`
     : `<span style="font-size:32px">${p.icon}</span>`;
-  const fallbackStyle = p.image ? 'display:none' : 'display:grid';
+  const fallbackStyle = image ? 'display:none' : 'display:grid';
   return `<article class="product-card"><div class="product-image">${imgHtml}<div style="${fallbackStyle};place-items:center;width:100%;height:100%">${logoFallback}</div></div><p class="brand-label">${esc(p.brand)}</p><strong>${esc(p.name)}</strong></article>`;
 }
 
